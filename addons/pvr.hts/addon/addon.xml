@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-  id="pvr.hts"
+  id="pvr.hts.transcoding"
   version="1.1.0"
-  name="Tvheadend HTSP Client"
+  name="Tvheadend HTSP Client With Transcoding support"
   provider-name="Lars Op den Kamp, Team XBMC">
   <requires>
     <c-pluff version="0.1"/>

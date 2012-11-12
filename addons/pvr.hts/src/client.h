@@ -30,6 +30,8 @@
 #define DEFAULT_CONNECT_TIMEOUT  6
 #define DEFAULT_RESPONSE_TIMEOUT 4
 #define HTSP_DEBUGGING           0
+#define DEFAULT_TRANSCODE        false
+#define DEFAULT_RESOLUTION       480
 
 extern bool                      m_bCreated;
 extern std::string               g_strHostname;
@@ -39,10 +41,15 @@ extern std::string               g_strUsername;
 extern std::string               g_strPassword;
 extern int                       g_iConnectTimeout;
 extern int                       g_iResponseTimeout;
+extern bool                      g_bTranscode;
+extern std::string               g_strAudioCodec;
+extern std::string               g_strVideoCodec;
+extern int                       g_iResolution;
 extern bool                      g_bShowTimerNotifications;
 extern std::string               g_szUserPath;
 extern std::string               g_szClientPath;
 extern ADDON::CHelper_libXBMC_addon *   XBMC;
 extern CHelper_libXBMC_pvr *     PVR;
+
 
 uint32_t HTSPNextSequenceNumber(void);

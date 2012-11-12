@@ -438,6 +438,13 @@ bool CHTSPDemux::SendSubscribe(int subscription, int channel)
   htsmsg_add_str(m, "method"        , "subscribe");
   htsmsg_add_s32(m, "channelId"     , channel);
   htsmsg_add_s32(m, "subscriptionId", subscription);
+  if(g_bTranscode)
+  {
+    htsmsg_add_u32(m, "maxWidth"    , g_iResolution * 16 / 9);
+    htsmsg_add_u32(m, "maxHeight"   , g_iResolution);
+    htsmsg_add_str(m, "audioCodec"  , g_strAudioCodec.c_str());
+    htsmsg_add_str(m, "videoCodec"  , g_strVideoCodec.c_str());
+  }
   return m_session->ReadSuccess(m, true, "subscribe to channel");
 }
 
